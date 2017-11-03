@@ -27,21 +27,15 @@ export const fileAction = function () {
       })
     })
 
-    btnSave.addEventListener('click', function () {
-      dialog.showSaveDialog(function (filePath) {
+    btnSave.addEventListener('click', () => {
+      dialog.showSaveDialog((filePath) => {
         if (filePath === undefined) {
           return
         }
 
-        fs.writeFile(filePath, content.innerHsTML, function (err) {
-          if (err === undefined) {
-            dialog.showMessageBox({
-              message: 'The file has been saved!',
-              buttons: ['OK']
-            })
-          } else {
-            dialog.showErrorBox('File save error', err.message)
-          }
+        fs.writeFile(filePath, content.innerHTML, (err) => {
+          if (err) throw err
+          console.log('The file has been saved!')
         })
       })
     })
