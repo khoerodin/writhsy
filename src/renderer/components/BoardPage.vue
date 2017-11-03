@@ -4,13 +4,13 @@
       <div class="columns is-mobile is-gapless">
         <div class="column is-draggable">
           <div class="is-pulled-right">
-            <button type="button" class="button is-light has-text-grey" id="load">SAVE AS DRAFT</button>
+            <button type="button" class="button is-light has-text-grey" id="load">OPEN</button>
             <button type="button" class="button is-primary" id="save">SAVE</button>
           </div>
         </div>
       </div>
     </div>
-    <div id="editor" class="markdown-body"></div> 
+    <div id="editor" class="markdown-body"></div>
   </section>
 </template>
 
