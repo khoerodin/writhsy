@@ -1,0 +1,4 @@
+.is-draggable {
+    -ms-overflow-style: scrollbar;
+    -webkit-app-region: drag;
+}
