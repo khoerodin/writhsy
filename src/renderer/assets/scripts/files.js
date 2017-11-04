@@ -3,6 +3,9 @@
 export const fileAction = function () {
   const fs = require('fs')
   const {dialog} = require('electron').remote
+  const toMarkdown = require('to-markdown')
+  var showdown = require('showdown')
+  var converter = new showdown.Converter()
 
   document.addEventListener('DOMContentLoaded', function () {
     var btnLoad = document.querySelector('#load')
@@ -22,12 +25,30 @@ export const fileAction = function () {
             return
           }
 
-          var filePath = filePaths[0]
+          const filePath = filePaths[0]
+          var html = converter.makeHtml(fs.readFileSync(filePath, 'utf-8'))
+
+          // create div element for modify element content
+          var div = document.createElement('div')
+          div.innerHTML = html
+
+          // remove p tag inside blockquote tag
+          var blockquote = div.getElementsByTagName('blockquote')
+          for (var i = 0; i < blockquote.length; i++) {
+            var blockElm = blockquote[i]
+            var p = blockElm.getElementsByTagName('p')
+            for (var a = 0; a < p.length; a++) {
+              var parent = p[a].parentNode
+              while (p[a].firstChild) parent.insertBefore(p[a].firstChild, p[a])
+              parent.removeChild(p[a])
+            }
+            blockElm.innerHTML = blockElm.innerText.trim()
+          }
+
+          const htmlContent = div.innerHTML
 
           try {
-            content.innerHTML = fs.readFileSync(filePath, 'utf-8')
-
-            console.log('Loaded file:' + filePath)
+            content.innerHTML = htmlContent
           } catch (err) {
             console.log('Error reading the file: ' + JSON.stringify(err))
           }
@@ -36,6 +57,8 @@ export const fileAction = function () {
     })
 
     btnSave.addEventListener('click', () => {
+      const markdownContent = toMarkdown(content.innerHTML)
+
       dialog.showSaveDialog(
         {
           filters: [{
@@ -47,7 +70,7 @@ export const fileAction = function () {
           if (filePath === undefined) {
             return
           }
-          fs.writeFile(filePath, content.innerHTML, (err) => {
+          fs.writeFile(filePath, markdownContent, (err) => {
             if (err) throw err
             console.log('The file has been saved!')
           })
