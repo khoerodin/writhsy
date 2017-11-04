@@ -2,3 +2,27 @@
     -ms-overflow-style: scrollbar;
     -webkit-app-region: drag;
 }
+.ql-editor {
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 45px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size:18px;
+    line-height:135%;
+}
+
+.ql-editor p {
+    font-family:'Noto Serif',serif;
+}
+
+.ql-editor h1, .ql-editor h2, .ql-editor h3, .ql-editor h4, .ql-editor h5, .ql-editor h6 {
+    font-weight: bold;
+}
+
+@media (max-width: 767px) {
+    .ql-editor {
+      padding: 45px 15px 15px 15px;
+    }
+}
