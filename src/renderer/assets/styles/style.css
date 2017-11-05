@@ -21,6 +21,11 @@
     font-weight: bold;
 }
 
+.ql-editor blockquote {
+    font-family: "Noto Serif", serif;
+    font-style: italic;
+}
+
 @media (max-width: 767px) {
     .ql-editor {
       padding: 45px 15px 15px 15px;
