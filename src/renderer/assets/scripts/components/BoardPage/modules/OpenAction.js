@@ -5,7 +5,9 @@ export const OpenAction = function () {
   const {dialog} = require('electron').remote
   const showdown = require('showdown')
   const converter = new showdown.Converter()
+  converter.setFlavor('github')
   const content = document.querySelector('.ql-editor')
+
   dialog.showOpenDialog(
     {
       filters: [{
