@@ -18,7 +18,8 @@
 </script>
 
 <style lang="scss">
-  @import '~quill/dist/quill.bubble.css';
+  @import '~medium-editor/dist/css/medium-editor.min.css';
+  @import '~medium-editor/dist/css/themes/beagle.min.css';
   @import '~bulma';
   @import '../assets/styles/fonts.css';
   @import '../assets/styles/style.css';

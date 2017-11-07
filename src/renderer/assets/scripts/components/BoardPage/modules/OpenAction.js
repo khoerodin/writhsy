@@ -6,7 +6,7 @@ export const OpenAction = function () {
   const showdown = require('showdown')
   const converter = new showdown.Converter()
   converter.setFlavor('github')
-  const content = document.querySelector('.ql-editor')
+  const content = document.querySelector('#editor')
 
   dialog.showOpenDialog(
     {

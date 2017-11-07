@@ -7,7 +7,7 @@ export const SaveAction = function () {
   const fs = require('fs')
   const {dialog} = require('electron').remote
   const toMarkdown = require('to-markdown')
-  const content = document.querySelector('.ql-editor')
+  const content = document.querySelector('#editor')
   const markdownContent = toMarkdown(content.innerHTML)
 
   dialog.showSaveDialog(

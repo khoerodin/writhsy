@@ -1,8 +1,8 @@
-.is-draggable {
+#editor {
     -ms-overflow-style: scrollbar;
     -webkit-app-region: drag;
 }
-.ql-editor {
+#editor {
     box-sizing: border-box;
     min-width: 200px;
     max-width: 980px;
@@ -13,21 +13,25 @@
     line-height:135%;
 }
 
-.ql-editor p {
+#editor p {
     font-family:'Noto Serif',serif;
 }
 
-.ql-editor h1, .ql-editor h2, .ql-editor h3, .ql-editor h4, .ql-editor h5, .ql-editor h6 {
+#editor h1, #editor h2, #editor h3, #editor h4, #editor h5, #editor h6 {
     font-weight: bold;
 }
 
-.ql-editor blockquote {
+#editor blockquote {
     font-family: "Noto Serif", serif;
     font-style: italic;
 }
 
 @media (max-width: 767px) {
-    .ql-editor {
+    #editor {
       padding: 45px 15px 15px 15px;
     }
+}
+
+[contenteditable]:focus {
+    outline: 0px solid transparent;
 }

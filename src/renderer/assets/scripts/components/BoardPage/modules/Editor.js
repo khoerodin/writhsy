@@ -1,23 +1,11 @@
 'use strict'
 
-import Quill from 'quill'
+import {MediumEditor} from 'medium-editor'
 
 const Editor = function () {
-  let toolbarOptions = [
-    ['bold', 'italic'],
-    ['link', 'image'],
-    ['blockquote', 'code-block'],
-    [{ 'header': 1 }, { 'header': 2 }]
-  ]
-
-  let options = {
-    theme: 'bubble',
-    modules: {
-      toolbar: toolbarOptions
-    }
-  }
-  let editor = new Quill('#editor', options)
-  editor.focus()
+  var element = document.querySelector('#editor')
+  const editor = new MediumEditor(element)
+  console.log(editor)
 }
 
 export default {
