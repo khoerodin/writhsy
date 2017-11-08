@@ -26,7 +26,7 @@ export const OpenAction = function () {
       try {
         content.innerHTML = htmlContent
         document.querySelector('title').innerText = filePath
-        const fileState = {state: 'open', path: filePath}
+        const fileState = {state: 'open', filePath: filePath}
         window.localStorage.setItem('fileState', JSON.stringify(fileState))
       } catch (err) {
         console.log('Error reading the file: ' + JSON.stringify(err))
