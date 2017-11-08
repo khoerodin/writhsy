@@ -18,7 +18,7 @@ export const SaveAction = function () {
   const {dialog} = require('electron').remote
   const toMarkdown = require('to-markdown')
   const content = document.querySelector('#editor')
-  const markdownContent = toMarkdown(content.innerHTML)
+  const markdownContent = toMarkdown(content.innerHTML, { gfm: true })
 
   if (fileState.state === 'open') {
     save(fileState.filePath, markdownContent)
