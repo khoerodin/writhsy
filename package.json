@@ -46,12 +46,17 @@
       ]
     },
     "mac": {
+      "target": "dmg",
+      "category": "public.app-category.business",
       "icon": "build/icons/icon.icns"
     },
     "win": {
+      "target": "nsis",
       "icon": "build/icons/icon.ico"
     },
     "linux": {
+      "target": "deb",
+      "category": "Office",
       "icon": "build/icons"
     }
   },
