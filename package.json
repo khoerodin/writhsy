@@ -1,6 +1,6 @@
 {
   "name": "writhsy",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Khoerodin <khoerodin@live.com>",
   "description": "Distraction-Free Writing Tool",
   "license": null,
@@ -23,7 +23,7 @@
   },
   "build": {
     "productName": "Writhsy",
-    "appId": "org.simulatedgreg.electron-vue",
+    "appId": "id.khoerodin.writhsy",
     "directories": {
       "output": "build"
     },
