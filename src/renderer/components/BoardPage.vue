@@ -1,6 +1,6 @@
 <template>
-  <section class="section">
-    <div id="editor" class="wysiwyg"></div>
+  <section class="section wysiwyg">
+    <div id="editor"></div>
   </section>
 </template>
 
