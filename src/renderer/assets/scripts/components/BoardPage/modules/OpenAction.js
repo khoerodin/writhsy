@@ -21,26 +21,7 @@ export const OpenAction = function () {
       }
 
       const filePath = filePaths[0]
-      const html = converter.makeHtml(fs.readFileSync(filePath, 'utf-8'))
-
-      // create div element for modify element content
-      const div = document.createElement('div')
-      div.innerHTML = html
-
-      // remove p tag inside blockquote tag
-      const blockquote = div.getElementsByTagName('blockquote')
-      for (var i = 0; i < blockquote.length; i++) {
-        const blockElm = blockquote[i]
-        const p = blockElm.getElementsByTagName('p')
-        for (var a = 0; a < p.length; a++) {
-          const parent = p[a].parentNode
-          while (p[a].firstChild) parent.insertBefore(p[a].firstChild, p[a])
-          parent.removeChild(p[a])
-        }
-        blockElm.innerHTML = blockElm.innerText.trim()
-      }
-
-      const htmlContent = div.innerHTML
+      const htmlContent = converter.makeHtml(fs.readFileSync(filePath, 'utf-8'))
 
       try {
         content.innerHTML = htmlContent
