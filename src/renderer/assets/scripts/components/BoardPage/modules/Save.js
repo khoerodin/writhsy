@@ -9,7 +9,6 @@ const SaveShortcut = function () {
   })
 }
 
-
 const Save = function () {
   SaveShortcut()
 }
