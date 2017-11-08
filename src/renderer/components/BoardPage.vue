@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <div id="editor"></div>
+    <div id="editor" class="wysiwyg"></div>
   </section>
 </template>
 
@@ -20,7 +20,7 @@
 <style lang="scss">
   @import '~medium-editor/dist/css/medium-editor.min.css';
   @import '~medium-editor/dist/css/themes/beagle.min.css';
-  @import '~bulma';
   @import '../assets/styles/fonts.css';
   @import '../assets/styles/style.css';
+  @import '../assets/styles/wysiwyg.css';
 </style>
