@@ -3,9 +3,7 @@
 import {MediumEditor} from 'medium-editor'
 
 const Editor = function () {
-  var element = document.querySelector('#editor')
-  const editor = new MediumEditor(element)
-  console.log(editor)
+  return new MediumEditor('#editor')
 }
 
 export default {
