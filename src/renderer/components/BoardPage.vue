@@ -20,7 +20,7 @@
 <style lang="scss">
   @import '~medium-editor/dist/css/medium-editor.min.css';
   @import '~medium-editor/dist/css/themes/beagle.min.css';
+  @import '../assets/styles/wysiwyg.sass';
   @import '../assets/styles/fonts.css';
   @import '../assets/styles/style.css';
-  @import '../assets/styles/wysiwyg.css';
 </style>
