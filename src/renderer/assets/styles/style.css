@@ -11,19 +11,11 @@
     font-family: "Source Sans Pro", sans-serif;
     font-size:18px;
     line-height:135%;
+    color: #2c3e50;
 }
 
 #editor p {
     font-family:'Noto Serif',serif;
-}
-
-#editor h1, #editor h2, #editor h3, #editor h4, #editor h5, #editor h6 {
-    font-weight: bold;
-}
-
-#editor blockquote {
-    font-family: "Noto Serif", serif;
-    font-style: italic;
 }
 
 @media (max-width: 767px) {
