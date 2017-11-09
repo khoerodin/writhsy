@@ -11,7 +11,10 @@ const Editor = function () {
     }
   })
 
-  return new MediumEditor(element)
+  return new MediumEditor(element, {
+    placeholder: false,
+    buttonLabels: 'fontawesome'
+  })
 }
 
 export default {
