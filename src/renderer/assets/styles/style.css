@@ -2,7 +2,7 @@
     -ms-overflow-style: scrollbar;
     -webkit-app-region: drag;
 }
-.wysiwyg {
+#editor {
     box-sizing: border-box;
     min-width: 200px;
     max-width: 980px;
@@ -15,7 +15,7 @@
 }
 
 @media (max-width: 767px) {
-    .wysiwyg {
+    #editor {
       padding: 45px 15px 15px 15px;
     }
 }
