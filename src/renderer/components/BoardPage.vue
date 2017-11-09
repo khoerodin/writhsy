@@ -23,4 +23,6 @@
   @import '../assets/styles/wysiwyg.sass';
   @import '../assets/styles/fonts.css';
   @import '../assets/styles/style.css';
+  $fa-font-path: "~font-awesome/fonts";
+  @import "~font-awesome/scss/font-awesome";
 </style>
